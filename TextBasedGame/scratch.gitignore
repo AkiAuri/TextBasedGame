@@ -1,0 +1,17 @@
+﻿# Build results
+[Bb]in/
+[Oo]bj/
+
+# Or more specific:
+bin/Debug/
+bin/Release/
+obj/Debug/
+obj/Release/
+
+# Visual Studio / Rider cache
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
