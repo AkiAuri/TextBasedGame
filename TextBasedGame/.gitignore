@@ -1,6 +1,6 @@
 ﻿# Build results
-[Bb]in/
-[Oo]bj/
+bin/
+obj/
 
 # Or more specific:
 bin/Debug/
