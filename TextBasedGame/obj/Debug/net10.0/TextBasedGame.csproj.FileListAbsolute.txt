@@ -1,0 +1,14 @@
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Debug\net10.0\TextBasedGame.exe
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Debug\net10.0\TextBasedGame.deps.json
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Debug\net10.0\TextBasedGame.runtimeconfig.json
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Debug\net10.0\TextBasedGame.dll
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Debug\net10.0\TextBasedGame.pdb
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.AssemblyInfoInputs.cache
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.AssemblyInfo.cs
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.csproj.CoreCompileInputs.cache
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.dll
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\refint\TextBasedGame.dll
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.pdb
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\TextBasedGame.genruntimeconfig.cache
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\obj\Debug\net10.0\ref\TextBasedGame.dll
