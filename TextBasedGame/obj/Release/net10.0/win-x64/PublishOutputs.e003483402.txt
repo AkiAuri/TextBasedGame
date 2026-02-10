@@ -1,0 +1,2 @@
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Release\net10.0\win-x64\publish\TextBasedGame.pdb
+D:\Project_Folders\JavaSolutionFile\TextBasedGame\TextBasedGame\bin\Release\net10.0\win-x64\publish\TextBasedGame.exe
