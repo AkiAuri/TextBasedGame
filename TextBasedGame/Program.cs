@@ -100,6 +100,7 @@ internal class TextBasedGame
         
         Console.WriteLine("\nAlthough it felt so quick I wonder... Could I have done anything more? Was there a pattern or a sequence to what I should have chosen?");
         Console.WriteLine("No, that's stupid... Why do I harbor so much regrets in my heart even in the end, though... I wish I could tell them one more thing... but I don't think I would be able to, but I'm sorry. I wasn't perfect and I hope you all can forgive me... wherever you may be...");
+        Console.ReadKey();
     }
     
     private void PlayRoom()
@@ -150,7 +151,7 @@ internal class TextBasedGame
     {
         if (_remainingInteractions <= 0)
         {
-            Console.WriteLine("\n[!] You have no interactions left! Move to the next room.");
+            Console.WriteLine("\n[!] I have no interactions left... Maybe I should move to the next room.");
             return;
         }
         
@@ -160,14 +161,13 @@ internal class TextBasedGame
             return;
         }
         
-        // Perform interaction
         _interactedItems[_currentRoom, itemNumber] = true;
         _remainingInteractions--;
         
         var itemName = RoomItems[_currentRoom][itemNumber];
-        Console.WriteLine($"\n→ You observe the {itemName}...");
+        Console.WriteLine($"\n→ I observe the {itemName}...");
         
-        // Coin flip: 50% chance positive, 50% chance negative
+        // Coin flip wolfe
         var isPositive = _random.Next(2) == 0;
         
         var observation = isPositive 

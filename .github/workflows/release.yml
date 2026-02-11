@@ -1,0 +1,65 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build Windows
+    - name: Build Windows x64
+      run: dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=true -o ./publish/win-x64
+
+    # Build Linux
+    - name: Build Linux x64
+      run: dotnet publish -c Release -r linux-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=true -o ./publish/linux-x64
+
+    # Build macOS
+    - name: Build macOS x64
+      run: dotnet publish -c Release -r osx-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=true -o ./publish/osx-x64
+
+    # Zip using standard Linux 'zip' command to preserve permissions
+    - name: Zip Builds
+      run: |
+        cd publish/win-x64 && zip -r ../../TextBasedGame-Windows-x64.zip . && cd ../..
+        cd publish/linux-x64 && zip -r ../../TextBasedGame-Linux-x64.zip . && cd ../..
+        cd publish/osx-x64 && zip -r ../../TextBasedGame-macOS-x64.zip . && cd ../..
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          TextBasedGame-Windows-x64.zip
+          TextBasedGame-Linux-x64.zip
+          TextBasedGame-macOS-x64.zip
+        body: |
+          ## Text-Based Adventure Game Release
+          
+          Download the version for your operating system:
+          - **Windows**: TextBasedGame-Windows-x64.zip
+          - **Linux**: TextBasedGame-Linux-x64.zip
+          - **macOS**: TextBasedGame-macOS-x64.zip
+          
+          Extract and run the executable!
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
